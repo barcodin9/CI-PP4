@@ -79,6 +79,11 @@
     font-weight: bold;
   }
 
+  .footer-logo a {
+    color: white;
+    text-decoration: none;
+  }
+
   .footer-links {
     margin: 10px;
   }
@@ -87,4 +92,12 @@
     color: white;
     text-decoration: none;
     margin: 0 10px;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  .copyright{
+    margin-top: 20px;
   }
