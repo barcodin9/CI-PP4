@@ -66,3 +66,25 @@
     background-color: grey;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   }
+
+  footer {
+    background-color: grey;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .footer-links {
+    margin: 10px;
+  }
+
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
