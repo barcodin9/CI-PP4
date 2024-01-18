@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'whosnewsdb',
+       'NAME': 'db',
        'USER': 'barra',
        'PASSWORD': 'password',
-       'HOST': '',
-       'PORT': '',
+       'HOST': 'localhost',
+       'PORT': '5432',
     }
 }
 
