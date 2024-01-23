@@ -17,14 +17,16 @@ function displayNews(newsData) {
     newsData.news.forEach(article => {
         const card = document.createElement('div')
             card.className = 'card'
-            card.innterHTML = `
+            card.innerHTML = `
+            <img src="${article.image}" alt="Article Image" style="width:100%; height: auto; border-radius: 5px;">
             <h3>${article.title}</h3>
-            <p>${article.text}</p> 
-            <a href="${article.url}" target="_blank">Read More!</a>
-            `
+            <p>${article.text}</p>
+            <a href="${article.url}" target="_blank">Read more</a>
+            `;
         newsContainer.appendChild(card)
     })
 }
+
 
 const searchInput = document.getElementById('searchinput')
 const button = document.getElementById('searchbutton')
