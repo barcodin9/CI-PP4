@@ -17,10 +17,16 @@ function displayNews(newsData) {
     newsData.news.forEach(article => {
         const card = document.createElement('div')
             card.className = 'card'
+
+            let snippet = article.text
+            if (snippet.length > 200) {
+                snippet = snippet.substring(0, 200) + '...'
+            }
+
             card.innerHTML = `
             <img src="${article.image}" alt="Article Image" style="width:100%; height: auto; border-radius: 5px;">
             <h3>${article.title}</h3>
-            <p>${article.text}</p>
+            <p>${snippet}</p>
             <a href="${article.url}" target="_blank">Read more</a>
             `;
         newsContainer.appendChild(card)
