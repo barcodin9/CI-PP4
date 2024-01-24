@@ -34,11 +34,23 @@ function displayNews(newsData) {
 }
 
 
-const searchInput = document.getElementById('searchinput')
-const button = document.getElementById('searchbutton')
+// const searchInput = document.getElementById('searchinput')
+// const button = document.getElementById('searchbutton')
 
-button.addEventListener('click', async() => {
-    const response = await newsSearch(searchInput.value)
-    console.log(response)
-});
+// button.addEventListener('click', async() => {
+//     const response = await newsSearch(searchInput.value)
+//     console.log(response)
+// });
 
+
+// Categories / News page //
+
+const categories = document.getElementsByClassName('news-cats')
+console.log(categories)
+
+Array.from(categories).forEach(category => {
+    category.addEventListener('click', (e) => {
+        console.log(e.target.innerText)
+    })
+
+})
