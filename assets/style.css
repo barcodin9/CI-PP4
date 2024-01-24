@@ -1,3 +1,8 @@
+body {
+  height:100%;
+  background: lightcyan;
+}
+
 .navbar{
     background-color: lightcyan;
 }
@@ -58,7 +63,9 @@
       flex-wrap: wrap;
       justify-content: space-around;
       background: lightcyan;
+      padding-bottom: 20px;
   }
+
 
   .card {
       width: 30%;
@@ -74,7 +81,7 @@
   }
 
   .card p {
-      font-size: 14px;
+      font-size: 20px;
   }
 
   .card a {
@@ -83,6 +90,19 @@
       text-decoration: none;
       color: blue;
   }
+
+   /*Media Q stack cards vertically on phone screens */
+   @media (max-width: 600px) {
+    .news-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+      width: 80%;
+      margin-bottom: 20px;
+    }
+}
 
 
   footer {
@@ -140,9 +160,28 @@
   }
 
   .searchbar-cont{
+    height:20vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: lightcyan;
+  }
+
+  .searchbar{
+    height: 50px;
+    width: 50%;
+    border: 3px solid black; 
+    border-radius: 10px;
+    margin: 10 10 10 10;
+    padding-left: 10px;
+  }
+
+  .searchbutton{
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    margin: 5px;
   }
