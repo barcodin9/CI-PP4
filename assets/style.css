@@ -1,6 +1,9 @@
-body {
+html, body {
   height:100%;
+  margin: 0;
   background: lightcyan;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar{
@@ -57,6 +60,10 @@ body {
 
   /*News cards content generated from API pull*/
 
+  .content-wrap{
+    min-height: calc(100vh - 486px - 184px);
+  }
+
   .news-cards {
       width: 100%;
       display: flex;
@@ -91,6 +98,35 @@ body {
       color: blue;
   }
 
+  .searchbar{
+    height: 50px;
+    width: 50%;
+    border: 3px solid black; 
+    border-radius: 10px;
+    margin: 10 10 10 10;
+    padding-left: 10px;
+  }
+
+  .searchbutton{
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    margin: 5px;
+  }
+
+  .searchbar-cont{
+    height:20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcyan;
+  }
+
+  
+
    /*Media Q stack cards vertically on phone screens */
    @media (max-width: 600px) {
     .news-cards {
@@ -108,8 +144,9 @@ body {
   footer {
     background-color: grey;
     color: white;
-    padding: 20px 0;
+    padding: 35px;
     text-align: center;
+    margin-top: auto;
   
   }
 
@@ -159,29 +196,5 @@ body {
     height: 100%;
   }
 
-  .searchbar-cont{
-    height:20vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightcyan;
-  }
 
-  .searchbar{
-    height: 50px;
-    width: 50%;
-    border: 3px solid black; 
-    border-radius: 10px;
-    margin: 10 10 10 10;
-    padding-left: 10px;
-  }
 
-  .searchbutton{
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    background: black;
-    color: white;
-    margin: 5px;
-  }
