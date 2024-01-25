@@ -317,10 +317,59 @@ html, body {
 }
 
 @media (max-width: 700px) {
-  
+
   .signup-page .signup-container {
     width: 80%;
   }
 
 }
 
+/* Login Page */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 86px - 184px);
+}
+
+.login-page .login-container {
+  width: 30%;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-page .form-group {
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.login-page .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-page .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-page button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffaf00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-page button:hover {
+  background-color: grey;
+}
