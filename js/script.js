@@ -1,6 +1,6 @@
-async function newsSearch (userSearch) {
+async function newsSearch (userSearch, numberOfArticles = 12) {
     try {
-        const response = await fetch(`https://api.worldnewsapi.com/search-news?api-key=903a1fea0c8b4e7c996d81c552b613b5&text=${userSearch}&language=en&number=9`);
+        const response = await fetch(`https://api.worldnewsapi.com/search-news?api-key=903a1fea0c8b4e7c996d81c552b613b5&text=${userSearch}&language=en&number=${numberOfArticles}`);
         const whosnews = await response.json();
         console.log("API Response:", whosnews);
         return(whosnews)
@@ -39,7 +39,7 @@ const button = document.getElementById('searchbutton')
 
 if (button) {
 button.addEventListener('click', async() => {
-    const response = await newsSearch(searchInput.value)
+    const response = await newsSearch(searchInput.value, 3)
     console.log(response)
     displayNews(response) 
 });
