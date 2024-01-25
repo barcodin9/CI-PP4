@@ -374,3 +374,72 @@ html, body {
 .login-page button:hover {
   background-color: grey;
 }
+
+/* Contact Us */
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #edf4ed;
+}
+
+.contact-page .contact-container {
+  width: 35%;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-page .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.contact-page .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-page .form-group input,
+.contact-page .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-page textarea {
+  height: 100px; 
+}
+
+.contact-page button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffaf00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-page button:hover {
+  background-color: grey;
+}
+
+@media (max-width: 700px) {
+
+  .contact-page {
+    height: 90vh;
+  }
+
+  .contact-page .contact-container {
+    width: 80%;
+    padding: 30px;
+  }
+
+}
