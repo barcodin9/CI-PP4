@@ -316,5 +316,11 @@ html, body {
     background-color: grey;
 }
 
+@media (max-width: 700px) {
+  
+  .signup-page .signup-container {
+    width: 80%;
+  }
 
+}
 
