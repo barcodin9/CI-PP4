@@ -49,6 +49,19 @@ html, body {
   }
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  background: rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+
+
+
+
 .carousel-item{
     width: 100%;
     height: 400px;
@@ -61,29 +74,32 @@ html, body {
     object-fit: cover;
 }
 
+.img1 img{
+  object-fit: contain;
+  padding: 10px;
+}
+
 .overlay-text {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 100%;
-    height: 650px;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.1);
     color: white;
     padding: 10px;
     z-index: 1;
   }
-/*
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30%;
-    height:650px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    z-index: 1;
-  } */
+  .slide1{
+    color: black;
+  }
+
+
+  @media (max-width:900px) {
+    .carousel-item{
+      width: 100%;
+      height: 250px;
+      
+  }
+  }
 
   /*News cards content generated from API pull*/
 
@@ -184,7 +200,7 @@ html, body {
   }
 
   .footer-logo a img {
-    height: 100px;
+    height: 70px;
   }
 
   .footer-links {
@@ -384,6 +400,14 @@ html, body {
 
 .login-page button:hover {
   background-color: grey;
+}
+
+@media (max-width:900px) {
+
+  .login-page .login-container {
+    width: 80%;
+    
+  }
 }
 
 /* Contact Us */
