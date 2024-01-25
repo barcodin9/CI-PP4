@@ -1,9 +1,9 @@
 async function newsSearch (userSearch) {
     try {
-        const response = await fetch(`https://api.worldnewsapi.com/search-news?api-key=903a1fea0c8b4e7c996d81c552b613b5&text=${userSearch}&language=en&number=3`);
+        const response = await fetch(`https://api.worldnewsapi.com/search-news?api-key=903a1fea0c8b4e7c996d81c552b613b5&text=${userSearch}&language=en&number=9`);
         const whosnews = await response.json();
         console.log("API Response:", whosnews);
-        displayNews(whosnews);
+        return(whosnews)
     }
     catch (err) {
         console.log(err)
@@ -34,23 +34,33 @@ function displayNews(newsData) {
 }
 
 
-// const searchInput = document.getElementById('searchinput')
-// const button = document.getElementById('searchbutton')
+const searchInput = document.getElementById('searchinput')
+const button = document.getElementById('searchbutton')
 
-// button.addEventListener('click', async() => {
-//     const response = await newsSearch(searchInput.value)
-//     console.log(response)
-// });
+if (button) {
+button.addEventListener('click', async() => {
+    const response = await newsSearch(searchInput.value)
+    console.log(response)
+    displayNews(response) 
+});
+}
 
 
 // Categories / News page //
 
 const categories = document.getElementsByClassName('news-cats')
-console.log(categories)
 
 Array.from(categories).forEach(category => {
-    category.addEventListener('click', (e) => {
-        console.log(e.target.innerText)
-    })
+    category.addEventListener('click', async (e) => {
+        e.preventDefault()
+        try {
+            const articles = await newsSearch(e.target.innerText);
+            console.log(articles);
+            displayNews(articles);
+        } catch (err) {
+            console.error(err);
+        }
+    });
+});
 
-})
+
