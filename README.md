@@ -175,9 +175,9 @@ The App and Database were deployed using Heroku, the steps are as follows:
 - Add whitenoise to your middleware settings as shown =>
   
   MIDDLEWARE = [
-    # other middleware classes
+     other middleware classes
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
+  
 ]
 
 - Verify your filepaths and then check to ensure it integrated correctly before proceeding.
