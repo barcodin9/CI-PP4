@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-uyyr=u&8=kn8dx-fc@7rsn=+5m&zs6wz%mo3!7xfv-c6fp_xp^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
@@ -84,17 +84,17 @@ DATABASES = {
 }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'db',
-       'USER': 'barra',
-       'PASSWORD': 'password',
-       'HOST': 'localhost',
-       'PORT': '',
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'db',
+#        'USER': 'barra',
+#        'PASSWORD': 'password',
+#        'HOST': 'localhost',
+#        'PORT': '',
+#     }
     
-}
+# }
 
 
 # Password validation
