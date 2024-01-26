@@ -203,6 +203,9 @@ The live link can be found here - https://whos-news-131e53e640e5.herokuapp.com/
 
 ## Credits
 
+### Acknowledgements
+A big thank you to my brother Cathal for mentoring me through this process and assisting with the newsSearch script when I was struggling!
+
 ### API
 https://worldnewsapi.com/
 
