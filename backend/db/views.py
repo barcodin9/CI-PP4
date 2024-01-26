@@ -5,6 +5,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from .forms import ContactForm
 from django.conf import settings
 from django.core.mail import send_mail
+from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -12,6 +14,7 @@ from django.core.mail import send_mail
 def home(request): 
     return render(request, 'index.html')
 
+@login_required
 def news(request): 
     return render(request, 'news.html')
 

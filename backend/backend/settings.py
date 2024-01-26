@@ -134,3 +134,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'ci.pp4.testmail@gmail.com'
 EMAIL_HOST_PASSWORD = 'lzmi sqkh qlrv awrd'
 EMAIL_USE_TLS = True
+
+#Force login URL 
+LOGIN_URL = 'login'
