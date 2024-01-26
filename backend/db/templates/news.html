@@ -13,6 +13,18 @@
     </head>
 
     <body>
+      <header>
+        <!-- Login Indicator and Logout functionality-->
+        <div class="login-indicator">
+            {% if user.is_authenticated %}
+                Hello, {{ user.username }}! 
+                <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <p>Please log in</p>
+            {% endif %}
+        </div>
+    </header>
+
       <nav class="navbar navbar-expand-lg">
         <a href="index.html" class="navbar-logo"><img src="{% static 'images/logo 3.png' %}" alt="logo"></a>
           <a class="navbar-brand" href="index.html">Whos News!</a>
@@ -23,7 +35,7 @@
             <div class="navbar-nav">
               <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link" href="{% url 'news' %}">Categories</a>
-              <a class="nav-item nav-link" href="{% url 'login_view' %}">Log In</a>
+              <a class="nav-item nav-link" href="{% url 'login' %}">Log In</a>
               <a class="nav-item nav-link" href="{% url 'signup' %}">Sign Up</a>
               <a class="nav-item nav-link"  href="{% url 'contact' %}">Contact Us</a>
 

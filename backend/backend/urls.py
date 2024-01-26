@@ -17,13 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from db import views
+from django.urls import path
+from django.contrib.auth.views import LoginView, LogoutView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('news/', views.news, name="news"),
     path('contact/', views.contact, name="contact"),
-    path('login/', views.login_view, name="login_view"),
+    path('login/', views.login_view, name="login"),
+    path('logout/', LogoutView.as_view(), name='logout'),
     path('signup/', views.signup, name="signup"),
     # path('', include('backend.urls')),
 ]
