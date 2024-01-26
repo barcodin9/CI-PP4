@@ -3,10 +3,15 @@ async function newsSearch (userSearch, numberOfArticles = 12) {
         const response = await fetch(`https://api.worldnewsapi.com/search-news?api-key=903a1fea0c8b4e7c996d81c552b613b5&text=${userSearch}&language=en&number=${numberOfArticles}`);
         const whosnews = await response.json();
         console.log("API Response:", whosnews);
+        // check if any articles can be found via word entered
+        if (!whosnews.news || whosnews.news.length === 0 ) {
+            throw new Error("No articles were found for the keyword entered, please try again.")
+        }
         return(whosnews)
     }
     catch (err) {
         console.log(err)
+        return{ error: err.message}
     }
 }
 
