@@ -23,7 +23,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('news/', views.news, name="news"),
     path('contact/', views.contact, name="contact"),
-    path('login/', views.login, name="login"),
+    path('login/', views.login_view, name="login_view"),
     path('signup/', views.signup, name="signup"),
     # path('', include('backend.urls')),
 ]
