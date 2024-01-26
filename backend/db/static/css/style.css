@@ -489,3 +489,10 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+.delete-button{
+  background-color: darkred;
+  color:white;
+  margin: 20px;
+  
+}

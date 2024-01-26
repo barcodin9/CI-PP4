@@ -8,6 +8,7 @@ from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
 from .forms import UserEditForm
 from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import logout
 
 
 
@@ -95,5 +96,13 @@ def edit_profile(request):
         form = UserEditForm(instance=request.user)
 
     return render(request, 'edit_profile.html', {'form': form})
+
+@login_required
+def delete_account(request):
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+        logout(request)
+        return redirect('home')
 
 

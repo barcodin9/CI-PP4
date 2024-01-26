@@ -26,8 +26,8 @@
     </header>
 
       <nav class="navbar navbar-expand-lg">
-        <a href="index.html" class="navbar-logo"><img src="{% static 'images/logo 3.png' %}" alt="logo"></a>
-          <a class="navbar-brand" href="index.html">Whos News!</a>
+        <a href="{% url 'home' %}" class="navbar-logo"><img src="{% static 'images/logo 3.png' %}" alt="logo"></a>
+          <a class="navbar-brand" href="{% url 'home' %}">Whos News!</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -66,7 +66,7 @@
 
           <footer>
             <div class="footer-logo">
-                <a href="index.html" ><img src="{% static 'images/logo 3.png' %}" alt="logo"></a>
+                <a href="{% url 'home' %}" ><img src="{% static 'images/logo 3.png' %}" alt="logo"></a>
             </div>
             <div class="footer-links">
               <a href="#">Home</a>

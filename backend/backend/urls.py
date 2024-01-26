@@ -27,8 +27,10 @@ urlpatterns = [
     path('news/', views.news, name="news"),
     path('contact/', views.contact, name="contact"),
     path('login/', views.login_view, name="login"),
-    path('logout/', LogoutView.as_view(), name='logout'),
+    path('logout/', LogoutView.as_view(next_page='home'), name='logout'),
     path('signup/', views.signup, name="signup"),
     path('edit_profile/', views.edit_profile, name='edit_profile'),
+    path('delete_account/', views.delete_account, name='delete_account'),
+
     # path('', include('backend.urls')),
 ]
