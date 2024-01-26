@@ -58,10 +58,6 @@ html, body {
 }
 
 
-
-
-
-
 .carousel-item{
     width: 100%;
     height: 400px;
@@ -98,6 +94,10 @@ html, body {
       width: 100%;
       height: 250px;
       
+  }
+
+  .overlay-text{
+    display: none;
   }
   }
 
@@ -404,10 +404,16 @@ html, body {
 
 @media (max-width:900px) {
 
+  .login-page{
+    height: 80vh;
+  }
+  
+
   .login-page .login-container {
     width: 80%;
-    
   }
+
+  
 }
 
 /* Contact Us */
@@ -494,5 +500,5 @@ html, body {
   background-color: darkred;
   color:white;
   margin: 20px;
-  
+
 }
