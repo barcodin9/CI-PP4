@@ -9,7 +9,6 @@ gspread==5.11.1
 gunicorn==21.2.0
 idna==3.4
 oauthlib==3.2.2
-openapi-client==1.0.0
 packaging==23.2
 psycopg==3.1.16
 psycopg-binary==3.1.16
