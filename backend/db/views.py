@@ -6,6 +6,10 @@ from .forms import ContactForm
 from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
+from .forms import UserEditForm
+from django.contrib.auth import update_session_auth_hash
+
+
 
 
 
@@ -73,5 +77,23 @@ def contact(request):
     else:
             form = ContactForm()
     return render(request, 'contact.html', {'form': form})
+
+@login_required
+def edit_profile(request):
+    if request.method == 'POST':
+        form = UserEditForm(request.POST, instance=request.user)
+
+        if form.is_valid():
+            user = form.save(commit=False)
+            password = form.cleaned_data.get('password')
+            if password:
+                user.set_password(password)
+                update_session_auth_hash(request, user) 
+            user.save()
+            return redirect('home') 
+    else:
+        form = UserEditForm(instance=request.user)
+
+    return render(request, 'edit_profile.html', {'form': form})
 
 
