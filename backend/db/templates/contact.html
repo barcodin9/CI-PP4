@@ -34,7 +34,9 @@
           <div class="contact-page">
             <div class="contact-container">
                 <h2>Contact Us</h2>
-                <form id="contactForm">
+                <form id="contactForm" method="post">
+                  {% csrf_token %}
+                  
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
