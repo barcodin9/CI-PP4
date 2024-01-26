@@ -504,6 +504,12 @@ html, body {
   align-items: center;
 }
 
+.edit-profile-form-inputs{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .delete-button{
   background-color: darkred;
   color:white;

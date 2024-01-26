@@ -5,13 +5,13 @@ async function newsSearch (userSearch, numberOfArticles = 12) {
         console.log("API Response:", whosnews);
         // check if any articles can be found via word entered
         if (!whosnews.news || whosnews.news.length === 0 ) {
-            throw new Error("No articles were found for the keyword entered, please try again.")
+            throw new Error("No articles were found for the keyword entered, please try again.");
         }
-        return(whosnews)
+        return(whosnews);
     }
     catch (err) {
-        console.log(err)
-        return{ error: err.message}
+        console.log(err);
+        return{ error: err.message};
     }
 }
 
@@ -20,12 +20,12 @@ function displayNews(newsData) {
     newsContainer.innerHTML = '';
 
     newsData.news.forEach(article => {
-        const card = document.createElement('div')
-            card.className = 'card'
+        const card = document.createElement('div');
+            card.className = 'card';
 
-            let snippet = article.text
+            let snippet = article.text;
             if (snippet.length > 200) {
-                snippet = snippet.substring(0, 200) + '...'
+                snippet = snippet.substring(0, 200) + '...';
             }
 
             card.innerHTML = `
@@ -34,30 +34,30 @@ function displayNews(newsData) {
             <p>${snippet}</p>
             <a href="${article.url}" target="_blank">Read more</a>
             `;
-        newsContainer.appendChild(card)
-    })
+        newsContainer.appendChild(card);
+    });
 }
 
 
-const searchInput = document.getElementById('searchinput')
-const button = document.getElementById('searchbutton')
+const searchInput = document.getElementById('searchinput');
+const button = document.getElementById('searchbutton');
 
 if (button) {
 button.addEventListener('click', async() => {
-    const response = await newsSearch(searchInput.value, 3)
-    console.log(response)
-    displayNews(response) 
+    const response = await newsSearch(searchInput.value, 3);
+    console.log(response);
+    displayNews(response);
 });
 }
 
 
 // Categories / News page //
 
-const categories = document.getElementsByClassName('news-cats')
+const categories = document.getElementsByClassName('news-cats');
 
 Array.from(categories).forEach(category => {
     category.addEventListener('click', async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         try {
             const articles = await newsSearch(e.target.innerText);
             console.log(articles);
