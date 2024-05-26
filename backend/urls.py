@@ -31,6 +31,7 @@ urlpatterns = [
     path('signup/', views.signup, name="signup"),
     path('edit_profile/', views.edit_profile, name='edit_profile'),
     path('delete_account/', views.delete_account, name='delete_account'),
+    path('newsletter_signup/', views.newsletter_signup, name='newsletter_signup'),
 
     # path('', include('backend.urls')),
 ]

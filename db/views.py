@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
-from .forms import ContactForm
+from .forms import ContactForm, NewsletterSignupForm
 from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
@@ -106,3 +106,20 @@ def delete_account(request):
         return redirect('home')
 
 
+def newsletter_signup(request):
+    if request.method == 'POST':
+        form = NewsletterSignupForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            form.save()
+            send_mail(
+                'Newsletter Signup Confirmation',
+                'Thank you for signing up for our newsletter!',
+                settings.EMAIL_HOST_USER,
+                [email],
+                fail_silently=False,
+            )
+            return redirect('home')
+    else:
+        form = NewsletterSignupForm()
+    return render(request, 'newsletter_signup.html', {'form': form})
