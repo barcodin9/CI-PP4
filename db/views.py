@@ -16,8 +16,9 @@ from django.contrib.auth import logout
 
 
 # Create your views here.
-def home(request): 
-    return render(request, 'index.html')
+def home(request):
+    newsletter_form = NewsletterSignupForm()
+    return render(request, 'index.html', {'newsletter_form': newsletter_form})
 
 @login_required
 def news(request): 

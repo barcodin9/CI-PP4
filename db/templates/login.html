@@ -68,12 +68,6 @@
         
 
           <footer>
-            <form method="post" action="{% url 'newsletter_signup' %}">
-              {% csrf_token %}
-              {{ form.as_p }}
-              <button type="submit" class="btn btn-primary">Sign Up</button>
-          </form>
-          
             <div class="footer-logo">
                 <a href="{% url 'home' %}" ><img src="{% static 'images/logo 3.png' %}" alt="logo"></a>
             </div>
