@@ -4,11 +4,13 @@
     <title>Newsletter Signup</title>
 </head>
 <body>
-        <form method="post" id="newsletter-container">
+    <form method="post" id="newsletter-container" style="margin-bottom: 20px;">
         {% csrf_token %}
         <h2 id="email-entry">Sign Up to our newsletter!</h2>
-        <input type="email" name="email" placeholder="Your Email" id="email-entry">
-        <button type="submit" id="newsletter-submit">Sign up to my newsletter</button>
+        <div style="display: flex; justify-content: space-between;">
+            <input type="email" name="email" placeholder="Your Email" id="email-entry" style="flex: 3; margin-right: 10px;">
+            <button type="submit" id="newsletter-submit" style="flex: 1;">Sign up</button>
+        </div>
     </form>
 </body>
 </html>
