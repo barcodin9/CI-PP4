@@ -4,8 +4,7 @@
     <title>Newsletter Signup</title>
 </head>
 <body>
-    <h1>Newsletter Signup</h1>
-    <form method="post" id="newsletter-container">
+        <form method="post" id="newsletter-container">
         {% csrf_token %}
         <h2 id="email-entry">Sign Up to our newsletter!</h2>
         <input type="email" name="email" placeholder="Your Email" id="email-entry">
