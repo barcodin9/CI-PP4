@@ -94,9 +94,7 @@
 
           <footer>
             <form method="post" action="{% url 'newsletter_signup' %}">
-              {% csrf_token %}
-              {{ form.as_p }}
-              <button type="submit" class="btn btn-primary">Sign Up</button>
+              {% include 'newsletter_signup.html' %}
           </form>
           
             <div class="footer-logo">
