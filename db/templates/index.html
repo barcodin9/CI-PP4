@@ -93,7 +93,8 @@
         </div>
 
           <footer>
-            <form method="post" action="{% url 'newsletter_signup' %}">
+            <h2 id="email-entry">Sign Up to our newsletter!</h2>
+            <form method="post" action="{% url 'newsletter_signup' %}" style="display: flex; justify-content: center; margin-bottom: 20px;">
               {% include 'newsletter_signup.html' %}
           </form>
           
